@@ -1,0 +1,15 @@
+streamlit
+langchain
+langchain-core
+langchain-groq
+langchain-pinecone
+pinecone-client
+pinecone-text
+python-dotenv
+fastapi
+uvicorn[standard]
+django==4.2.7
+djangorestframework==3.14.0
+langchain-core==0.1.8
+langchain-groq==0.1.0
+python-dotenv==1.0.0
