@@ -1,12 +1,20 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from pydantic import BaseModel
+from dotenv import load_dotenv
+import os
 import uvicorn
 import requests
 
+# Load environment variables from .env file
+load_dotenv()
+
 app = FastAPI()
 
-# Replace this with your actual AssemblyAI API Key
-API_KEY = "your_assemblyai_api_key"
+# Read the API key from the environment
+API_KEY = os.getenv("ASSEMBLYAI_API_KEY")
+if not API_KEY:
+    raise RuntimeError("ASSEMBLYAI_API_KEY not found in environment variables")
+
 HEADERS = {"authorization": API_KEY}
 
 class TranscriptionResult(BaseModel):
