@@ -1,0 +1,36 @@
+{% extends 'title_app/base.html' %}
+
+{% block title %}Generate Blog Post Titles{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h1 class="h3 mb-0">Generate Blog Post Titles</h1>
+            </div>
+            <div class="card-body">
+                <p class="lead mb-4">
+                    Enter your blog post content below and get AI-generated title suggestions that are engaging and SEO-friendly.
+                </p>
+
+                <form method="post" action="{% url 'generate_titles' %}">
+                    {% csrf_token %}
+                    
+                    <div class="mb-3">
+                        <label for="{{ form.content.id_for_label }}" class="form-label">Blog Post Content</label>
+                        {{ form.content }}
+                        <div class="form-text">The more detailed your content, the better the title suggestions will be.</div>
+                    </div>
+                    
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            Generate Titles
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
