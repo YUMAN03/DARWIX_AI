@@ -42,8 +42,8 @@ ASSEMBLYAI_API_KEY=your_assemblyai_api_key
 
 ### 3. Run the backend and frontend
 ```bash
-uvicorn app:app --reload
-streamlit run frontend.py
+uvicorn main:app --reload
+streamlit run app.py
 ```
 ## 🌍 Live Deployments
 🔗 Frontend (Streamlit): https://nxvnfknnr82hn2o8hg8ptb.streamlit.app
@@ -62,23 +62,18 @@ This feature integrates an NLP model into a Django application to assist writers
 
 🔧 API Endpoint
 
-## Method	Endpoint	Description
-POST	/generate-titles/	Returns 3 AI-generated title ideas
-📤 Request Example
-json
-Copy
-Edit
-{
-  "content": "In this article, we explore how AI can transform the world of software development..."
-}
-📥 Response Example
-json
-Copy
-Edit
-{
-  "titles": [
-    "Revolutionizing Software Development with AI",
-    "How AI is Shaping the Future of Coding",
-    "The AI-Powered Evolution of Software Engineering"
-  ]
-}
+## How to run my second feature:
+### First clone my repository then add your own api keys, and then in the project folder run these commands on terminal.
+
+``` bash
+venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+
+## Images to demonstrate the app working
+![front_page](image.png)
+![Result for 2nd Feature](image-2.png)
+
+## PS: I have worked with all my sincerity and with my sense of perfection. I would be really if you could review this. It took long but it is a very well functioning application as i deployed the first feature using railways and streamlit. Please contact mohdyuman03@gmail.com for any queries.

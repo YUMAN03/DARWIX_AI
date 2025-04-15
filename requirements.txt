@@ -4,3 +4,10 @@ fastapi
 uvicorn[standard]
 python-dotenv
 python-multipart
+Django
+python-dotenv
+langchain
+langchain_groq
+dotenv
+langchain_core
+
