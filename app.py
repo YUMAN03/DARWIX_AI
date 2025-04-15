@@ -12,7 +12,7 @@ if st.button("Transcribe"):
     else:
         with st.spinner("Uploading and transcribing..."):
             try:
-                api_url = "http://localhost:8000/transcribe"
+                api_url = "darwixai-production.up.railway.app"
                 files = {'file': (audio_file.name, audio_file, audio_file.type)}
                 response = requests.post(api_url, files=files)
 
