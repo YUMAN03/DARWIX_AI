@@ -41,3 +41,30 @@ ASSEMBLYAI_API_KEY=your_assemblyai_api_key
 uvicorn app:app --reload
 
 streamlit run frontend.py
+
+
+---
+
+## ✨ Feature 2: Blog Post Title Suggestions
+
+This feature integrates an NLP model into a Django application to assist writers by automatically suggesting engaging blog post titles based on the content provided.
+
+### 📌 Functionality
+
+- 🧠 Uses basic NLP logic or a pre-trained model to generate 3 potential blog titles.
+- 🔗 Exposes a Django REST endpoint for easy integration with frontends or CMS platforms.
+
+---
+
+### 🔧 API Endpoint
+
+| Method | Endpoint             | Description                        |
+|--------|----------------------|------------------------------------|
+| POST   | `/generate-titles/`  | Returns 3 AI-generated title ideas |
+
+#### 📤 Request Body Example
+
+```json
+{
+  "content": "In this article, we explore how AI can transform the world of software development..."
+}
