@@ -1,6 +1,7 @@
 streamlit
 requests
 fastapi
+gunicorn
 uvicorn[standard]
 python-dotenv
 python-multipart
