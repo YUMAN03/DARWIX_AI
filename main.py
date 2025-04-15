@@ -5,6 +5,7 @@ import os
 import uvicorn
 import requests
 from fastapi.middleware.cors import CORSMiddleware
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
@@ -17,7 +18,7 @@ app.add_middleware(
 # Load environment variables from .env file
 load_dotenv()
 
-app = FastAPI()
+
 
 # Read the API key from the environment
 API_KEY = os.getenv("ASSEMBLYAI_API_KEY")
