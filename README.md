@@ -41,16 +41,3 @@ ASSEMBLYAI_API_KEY=your_assemblyai_api_key
 uvicorn app:app --reload
 
 streamlit run frontend.py
-
-{
-  "utterances": [
-    {
-      "speaker": 1,
-      "text": "Hello, how are you?"
-    },
-    {
-      "speaker": 2,
-      "text": "I'm good, thank you!"
-    }
-  ]
-}
