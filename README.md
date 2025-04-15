@@ -3,6 +3,7 @@
 A full-stack AI-powered tool for transcribing audio files and distinguishing between speakers using diarization. Supports multilingual audio and returns structured JSON output for easy downstream processing.
 
 ![app_feature_1_demo](image-1.png)
+![Result_feature_1](image-3.png)
 
 ---
 
